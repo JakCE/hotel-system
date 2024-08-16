@@ -1,0 +1,8 @@
+.item-link.active{
+    background-color: #EDE9FE;
+    color: #8B5CF6;
+}
+
+.item-link.active + .after-fil{
+    background-color: #8B5CF6;
+}

@@ -1,0 +1,6 @@
+.part-screens{
+    @apply w-[calc(100%-250px)];
+}
+.part-screens-2{
+    @apply w-[calc(100%-80px)];
+}

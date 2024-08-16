@@ -1,0 +1,112 @@
+<div class="hidden">  
+    <!-- Sidebar -->
+    <div [ngClass]="{'translate-x-0': isOpen, '-translate-x-full': !isOpen}" class="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30">
+      <button (click)="toggleSidebar()" class="p-4">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <nav class="mt-10">
+        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-200 hover:text-gray-700 text-gray-700">Dashboard</a>
+        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-200 hover:text-gray-700 text-gray-700">Analytics</a>
+        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-200 hover:text-gray-700 text-gray-700">CRM</a>
+        <!-- Agrega más enlaces según sea necesario -->
+      </nav>
+    </div>
+    
+    <!-- Page content -->
+    <div class="flex-1">
+      <button (click)="toggleSidebar()" class="p-4">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <!-- Aquí va el contenido de la página -->
+      <div class="p-4">
+        <!-- Tu contenido aquí -->
+      </div>
+    </div>
+</div>  
+
+<!-- NEWWWW -->
+<div class="container w-full h-[100vh] mx-auto overflow-auto">
+  <div class="container w-full p-4 my-5 md:p-8 md:my-0">
+    <img src="./img/log.png" alt="" class="w-full">
+  </div>
+  <nav class="w-full hidden md:block">
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='dashboard' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon>Dashboard</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-0">
+      <h2 class="item-link w-[90%] flex py-2.5 rounded transition duration-200 text-gray-400 justify-start items-center"><lucide-icon name="minus" class="pr-1.5"></lucide-icon>VENTAS</h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='ventas' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="ShoppingCart" class="pr-1.5"></lucide-icon>Ventas</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-0">
+      <h2 class="item-link w-[90%] flex py-2.5 rounded transition duration-200 text-gray-400 justify-start items-center"><lucide-icon name="minus" class="pr-1.5"></lucide-icon>APPS & PAGES</h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='analytics' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon>Niveles</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='crm' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon>CRM</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-0">
+      <h2 class="item-link w-[90%] flex py-2.5 rounded transition duration-200 text-gray-400 justify-start items-center"><lucide-icon name="minus" class="pr-1.5"></lucide-icon>REPORTES</h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='reportes' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="ChartSpline" class="pr-1.5"></lucide-icon>Reportes</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-0">
+      <h2 class="item-link w-[90%] flex py-2.5 rounded transition duration-200 text-gray-400 justify-start items-center"><lucide-icon name="minus" class="pr-1.5"></lucide-icon>CONFIGURACIÓN</h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='/config' routerLinkActive="active" class="item-link w-[90%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="Bolt" class="pr-1.5"></lucide-icon>Configuración</a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg"></div>
+    </div>
+  </nav>
+  <nav class="w-full block md:hidden">
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='dashboard' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+    <div class="w-full flex justify-center items-center py-1 pl-0">
+      <h2 class="item-link w-full flex py-2.5 rounded transition duration-200 text-gray-400 justify-center items-center"><lucide-icon name="minus" class=""></lucide-icon></h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='ventas' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="ShoppingCart" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+    <div class="w-full flex justify-center items-center py-1 pl-0">
+      <h2 class="item-link w-full flex py-2.5 rounded transition duration-200 text-gray-400 justify-center items-center"><lucide-icon name="minus" class=""></lucide-icon></h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='analytics' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='crm' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="house" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+    <div class="w-full flex justify-center items-center py-1 pl-0">
+      <h2 class="item-link w-full flex py-2.5 rounded transition duration-200 text-gray-400 justify-center items-center"><lucide-icon name="minus" class=""></lucide-icon></h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='reportes' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="ChartSpline" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+    <div class="w-full flex justify-center items-center py-1 pl-0">
+      <h2 class="item-link w-full flex py-2.5 rounded transition duration-200 text-gray-400 justify-center items-center"><lucide-icon name="minus" class=""></lucide-icon></h2>
+    </div>
+    <div class="w-full flex justify-between items-center py-1 pl-4">
+      <a routerLink='/config' routerLinkActive="active" class="item-link w-[78%] flex py-2.5 px-4 rounded transition duration-200 hover:bg-violet-100 hover:text-violet-500 text-gray-700 justify-start items-center"><lucide-icon name="Bolt" class="pr-1.5"></lucide-icon></a>
+      <div class="after-fil w-1 bg-transparent h-[45px] rounded-l-lg ml-2.5"></div>
+    </div>
+  </nav>
+</div>

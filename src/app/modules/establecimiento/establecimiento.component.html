@@ -1,0 +1,88 @@
+<div class="w-full bg-white h-full rounded p-5 overflow-auto">
+    <div class="">
+        <h1 class="font-bold text-gray-700">Tipo de establecimiento</h1><hr class="h-[1px]">
+        <div class="grid grid-cols-3 gap-4 p-5">
+            <div *ngFor="let option of options" class="flex items-center">
+                <input
+                tuiRadio
+                type="radio"
+                name="accommodation"
+                [value]="option"
+                [(ngModel)]="selectedOption"
+                size="s"
+                />
+                <label class="ml-2">{{ option }}</label>
+            </div>
+        </div>          
+        <h1 class="font-bold text-gray-700">Detalle de empresa</h1><hr class="h-[1px]">
+        <div class="grid grid-cols-3 gap-4 p-5" [formGroup]="estForm">
+            <tui-input class="col-span-3" formControlName="nameEstControl" tuiTextfieldSize="m">
+                Nombre del establecimiento
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-input class="col-span-3" formControlName="nameContactControl" tuiTextfieldSize="m">
+                Persona en contacto
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-input formControlName="telefonoFijoControl" tuiTextfieldSize="m">
+                Teléfono fijo
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-input formControlName="telefonoMovilControl" tuiTextfieldSize="m">
+                Teléfono móvil
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-input formControlName="telefonoWhatsControl" tuiTextfieldSize="m">
+                Telf. WhatsApp
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-input class="col-span-3" formControlName="emailControl" tuiTextfieldSize="m">
+                Email
+                <input
+                    tuiTextfieldLegacy
+                    type="email"
+                />
+            </tui-input>
+            <tui-input class="col-span-3" formControlName="webControl" tuiTextfieldSize="m">
+                Web
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <tui-select class="col-span-1" formControlName="paisControl" tuiTextfieldSize="m">
+                País
+                <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="paises"
+                ></tui-data-list-wrapper>
+            </tui-select>
+            <tui-select class="col-span-1" formControlName="departamentoControl" tuiTextfieldSize="m">
+                Estado - Departamento
+                <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="paises"
+                ></tui-data-list-wrapper>
+            </tui-select>
+            <tui-select class="col-span-1" formControlName="provinciaControl" tuiTextfieldSize="m">
+                Ciudad - Provincia
+                <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="paises"
+                ></tui-data-list-wrapper>
+            </tui-select>
+            <tui-input class="col-span-3" formControlName="direccionControl" tuiTextfieldSize="m">
+                Dirección
+                <input tuiTextfieldLegacy />
+            </tui-input>
+            <div class="col-span-3 flex justify-center items-center">
+                <button
+                    appearance="secondary"
+                    size="m"
+                    tuiButton
+                    style="background-color: #ede9fe; color: #8b5cf6"
+                >
+                    <lucide-icon name="Save" class="pr-1.5"></lucide-icon>
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
